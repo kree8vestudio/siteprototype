@@ -15,13 +15,16 @@ top:0;
 left:0;
 
 width:100vw;
-height:100vh;
+
+/* FIX FOR MOBILE HEIGHT */
+height:100dvh;
 
 overflow:hidden;
 
 z-index:1000;
 
 }
+
 
 
 /* SHUTTER */
@@ -33,17 +36,20 @@ top:0;
 left:0;
 
 width:100vw;
-height:100vh;
+
+/* MOBILE FIX */
+height:100dvh;
 
 background-image:url("shutter.png");
 
-background-size:cover;        /* MOST IMPORTANT */
-background-position:center;   /* center align */
+background-size:cover;
+
+background-position:center center;
+
 background-repeat:no-repeat;
 
-z-index:5;
-
 }
+
 
 /* IMAGE */
 .shutter-img{
@@ -99,20 +105,27 @@ z-index:5;
 }
 
 .logo-img{
+
 width:35vw;
-max-width:550px;
-height:auto;
-}
 
+max-width:500px;
 
-
-.logo-img{
-
-width:500px;     /* adjust size here */
+min-width:180px;
 
 height:auto;
 
-object-fit:contain;
+}
+
+/* FALLBACK */
+@supports not (height: 100dvh) {
+
+.container,
+.shutter {
+
+height:100vh;
 
 }
+
+}
+
 
