@@ -188,3 +188,14 @@ flex-wrap:wrap;
 }
 
 }
+.logo-img{
+
+width:320px;
+
+max-width:80vw;
+
+height:auto;
+
+animation:fadeUp 1.5s ease;
+
+}
