@@ -1,43 +1,28 @@
-let shutter = document.getElementById("shutter");
+// SET YOUR LAUNCH DATE HERE
+const launchDate = new Date("April 1, 2026 00:00:00").getTime();
 
-/* total scroll required */
-let totalScroll = window.innerHeight * 3;
+const timer = setInterval(function(){
 
-let current = 0;
-let target = 0;
+const now = new Date().getTime();
 
-window.addEventListener("load", function(){
+const distance = launchDate - now;
 
-window.scrollTo(0,0);
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-current = 0;
-target = 0;
+document.getElementById("days").innerText = days;
+document.getElementById("hours").innerText = hours;
+document.getElementById("minutes").innerText = minutes;
+document.getElementById("seconds").innerText = seconds;
 
-});
+if(distance < 0){
 
-window.addEventListener("scroll", function(){
+clearInterval(timer);
 
-target = window.scrollY;
-
-});
-
-function animate(){
-
-let progress = target / totalScroll;
-
-if(progress > 1) progress = 1;
-
-let ease = 1 - Math.pow(1 - progress, 3);
-
-let move = ease * window.innerHeight;
-
-current += (move - current) * 0.08;
-
-shutter.style.transform =
-"translateY(-" + current + "px)";
-
-requestAnimationFrame(animate);
+document.querySelector(".coming").innerText = "LIVE NOW";
 
 }
 
-animate();
+}, 1000);
