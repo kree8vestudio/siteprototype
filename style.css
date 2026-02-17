@@ -49,13 +49,7 @@ to{opacity:1;}
 
 /* main container */
 
-.container{
 
-position:relative;
-
-z-index:2;
-
-}
 
 /* logo */
 
@@ -81,7 +75,22 @@ letter-spacing:6px;
 
 opacity:0.6;
 
-margin-bottom:40px;
+margin-botto.container {
+
+position: relative;
+
+width: 100%;
+
+max-width: 500px;
+
+padding: 20px;
+
+margin: auto;
+
+text-align: center;
+
+}
+m:40px;
 
 animation:fadeUp 2s ease;
 
@@ -188,14 +197,36 @@ flex-wrap:wrap;
 }
 
 }
-.logo-img{
+.logo-img {
 
-width:320px;
+width: 100%;
 
-max-width:80vw;
+max-width: 280px;
 
-height:auto;
+height: auto;
 
-animation:fadeUp 1.5s ease;
+object-fit: contain;
+
+display: block;
+
+margin: 0 auto;
 
 }
+@media (max-width: 600px) {
+
+.container {
+
+padding-top: 80px;
+
+}
+
+.logo-img {
+
+max-width: 240px;
+
+}
+
+}
+
+
+
