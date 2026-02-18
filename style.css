@@ -16,9 +16,8 @@ min-height:100vh;
 
 overflow-x:hidden;
 
-display:flex;
-justify-content:center;
-align-items:center;
+/* REMOVE flex center */
+display:block;
 
 }
 
@@ -44,13 +43,13 @@ z-index:-1;
 
 .container{
 
-position:relative;
-
 width:100%;
 
 max-width:500px;
 
-padding:20px;
+margin:auto;
+
+padding:40px 20px 100px 20px;
 
 text-align:center;
 
@@ -62,13 +61,13 @@ text-align:center;
 
 width:100%;
 
-max-width:280px;
+max-width:260px;
 
 height:auto;
 
-display:block;
+margin:0 auto 25px auto;
 
-margin:0 auto 20px auto;
+display:block;
 
 }
 
@@ -76,11 +75,11 @@ margin:0 auto 20px auto;
 
 .coming{
 
-font-size:28px;
+font-size:24px;
 
-letter-spacing:8px;
+letter-spacing:6px;
 
-margin-bottom:30px;
+margin-bottom:25px;
 
 }
 
@@ -90,11 +89,11 @@ margin-bottom:30px;
 
 display:flex;
 
-gap:15px;
-
 justify-content:center;
 
 flex-wrap:wrap;
+
+gap:10px;
 
 margin-bottom:30px;
 
@@ -104,25 +103,23 @@ margin-bottom:30px;
 
 background:rgba(255,255,255,0.05);
 
-padding:15px 18px;
+padding:12px 15px;
 
-border-radius:8px;
+border-radius:6px;
 
-min-width:70px;
+min-width:65px;
 
 }
 
 .time-box span{
 
-font-size:22px;
-
-display:block;
+font-size:20px;
 
 }
 
 .time-box label{
 
-font-size:10px;
+font-size:9px;
 
 opacity:0.5;
 
@@ -136,9 +133,9 @@ display:flex;
 
 flex-direction:column;
 
-gap:12px;
-
 align-items:center;
+
+gap:12px;
 
 }
 
@@ -148,17 +145,19 @@ align-items:center;
 
 display:flex;
 
+flex-direction:column;
+
+width:100%;
+
+max-width:280px;
+
 gap:10px;
-
-flex-wrap:wrap;
-
-justify-content:center;
 
 }
 
 .email-form input{
 
-padding:10px;
+padding:12px;
 
 background:black;
 
@@ -168,11 +167,13 @@ color:white;
 
 outline:none;
 
+width:100%;
+
 }
 
 .email-form button{
 
-padding:10px 20px;
+padding:12px;
 
 background:white;
 
@@ -182,6 +183,8 @@ border:none;
 
 cursor:pointer;
 
+width:100%;
+
 }
 
 /* BUTTONS */
@@ -189,17 +192,19 @@ cursor:pointer;
 .whatsapp-btn,
 .insta-btn{
 
-display:inline-block;
+display:block;
 
-padding:10px 20px;
+width:100%;
+
+max-width:280px;
+
+padding:12px;
 
 border:1px solid white;
 
 color:white;
 
 text-decoration:none;
-
-width:220px;
 
 text-align:center;
 
@@ -223,30 +228,38 @@ border-color:#E1306C;
 
 .footer{
 
-position:fixed;
-
-bottom:15px;
-
-width:100%;
-
 text-align:center;
 
 font-size:12px;
 
 opacity:0.4;
 
+margin-top:40px;
+
+padding-bottom:20px;
+
 }
 
-/* MOBILE */
+/* MOBILE OPTIMIZATION */
 
 @media(max-width:600px){
 
+.container{
+
+padding-top:60px;
+
+}
+
 .logo-img{
+
 max-width:220px;
+
 }
 
 .coming{
+
 font-size:20px;
+
 }
 
 }
